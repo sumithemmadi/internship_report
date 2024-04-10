@@ -1,92 +1,80 @@
 \chapter{Design}
 \justify
 
-This chapter elaborates on the system design and architecture for the {\myprojectname} project.
+This chapter elaborates on the system design and architecture for the {\myprojectname} application.
 
 \section{Project Overview}
 
-The {\myprojectname} project aims to develop a robust system for collecting people's information for law enforcement purposes. The system design and architecture play a crucial role in ensuring the app's functionality, scalability, security, and ease of use.
+The {\myprojectname} project aims to develop a robust system for collecting people's information for law enforcement purposes.The "Call One" app is a part of Open-source data mining system. The system design and architecture play a crucial role in ensuring the app's functionality, scalability, security, and ease of use.
 
 \section{System Design}
 
-The system design of the "{\myprojectname}" app encompasses several key components:
+The Design of the System is depicted in Figure \ref{fig:App Flow}. This App Flow is designed to provide a seamless user experience while ensuring data collection, storage, and analysis for law enforcement purposes.The system design of the "Call One" app encompasses several key components:
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\linewidth]{Media//appFlow.jpg}
+    \includegraphics[width=1\linewidth]{Media//Application_Flow.jpeg}
     \caption{App Flow}
     \label{fig:App Flow}
 \end{figure}
 
 
-\begin{enumerate}[label=\arabic*.]
-    \item \textbf{User Interface (UI):} The UI design focuses on providing an intuitive and user-friendly experience for app users. It includes screens for data collection, settings, notifications, and law enforcement functionalities.
-    
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Application Loads:} The app uses a metro server to compile the React Native project into a JavaScript bundle. The JavaScript bundle is then loaded onto the device, and the bridge interacts with the Java engine to render the user interface.
+    \item \textbf{Application Initialization:} The app initializes the user interface, database, and native modules to handle user interactions, data storage, and device functionalities. Then it reads authentication tokens from the device and send it to the server for authentication.
+    \item \textbf{User Authentication:} Server authenticate the user by validationg JSON Web tokens. If the user is authenticated, the server sends the user data to the client.
     \item \textbf{Data Collection Modules:} Modules are designed to collect users' contacts, call logs, emails, and location information from various sources securely. Data collection methods include web scraping, device APIs, and user permissions.
-    
-    \item \textbf{Data Storage:} A robust database management system is implemented to store collected data securely. The system ensures data integrity, accessibility, and compliance with legal and privacy standards.
-    
-    \item \textbf{Security Features:} The app incorporates encryption mechanisms, access controls, and authentication protocols to safeguard sensitive data, especially law enforcement-related information.
-
-    \item \textbf{Scalability and Performance:} The architecture is designed to handle large volumes of data efficiently, ensuring scalability as user base and data collection grow. Performance optimizations are implemented for seamless app functionality.
-    
-    \item \textbf{Data Processing and Analysis:} Implementing data processing pipelines and analytical tools to cleanse, transform, and analyze collected data. This includes data normalization, pattern recognition, and predictive analytics to derive actionable insights for law enforcement agencies.
-    
-    \item \textbf{User Feedback Mechanisms:} Incorporating feedback mechanisms within the app to gather user input, suggestions, and reports on data accuracy or privacy concerns. Feedback loops help improve app functionalities and user experience iteratively.
-    
-    \item \textbf{Offline Data Access:} Designing the app to provide limited offline access to collected data, ensuring usability even in low connectivity or offline scenarios. Offline capabilities may include cached data access and synchronization when connectivity is restored.
-    
-    \item \textbf{Internationalization and Localization:} Adapting the app design and content for international users by incorporating multilingual support, localized content, and culturally sensitive UI/UX elements. This enhances user engagement and accessibility across diverse user demographics.
-    
-    \item \textbf{Accessibility Features:} Implementing accessibility features such as screen reader compatibility, text-to-speech functionality, high contrast modes, and adjustable font sizes to cater to users with disabilities and improve overall app inclusivity.
+    \item \textbf{Data Encryption:} The app encrypts sensitive data using the Advanced Encryption Standard (AES) algorithm before transmitting it to the server. This ensures data security and privacy during data transmission.
+    \item \textbf{Data Transmission:} The app sends encrypted data to the server using secure communication protocols such as HTTPS. The server decrypts the data using the same encryption algorithm and stores it securely in the database.
+    \item \textbf{Sucessful Authentication:} If the user is authenticated, the server sends the user data to the client. The client then loads the App.
+    \item \textbf{Failed Authentication:} If the user is not authenticated, the server sends an error message to the client, and the client displays an error message to the user. The user will be redirected to the login screen.
 \end{enumerate}
-
 
 \section{Architecture}
-
-The architecture of the "{\myprojectname}" app follows a client-server model with the following components:
+The architecture of the "Call One" app follows a client-server architecture depicted in Figure \ref{fig:React Native Architecture}. The client-side architecture is based on React Native, a popular framework for building cross-platform mobile applications. The server-side architecture comprises backend servers running on NginX, Express.js, and Node.js, along with a PostgreSQL database for data storage. The system design includes the following components and functionalities
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{Media//userLoginFlow.png}
-    \caption{User Interface}
-    \label{fig:User Interface}
+    \includegraphics[width=1\linewidth]{Media/arch.jpeg}
+    \caption{Android App Architecture}
+    \label{fig:React Native Architecture}
 \end{figure}
 
-\begin{enumerate}[label=\arabic*.]
 
-    \begin{figure}
-        \centering
-        \includegraphics[width=1\linewidth]{Media/RNA.png}
-        \caption{React Native Architecture}
-        \label{fig:React Native Architecture}
-    \end{figure}
+\subsection{Client Side}
 
-    \item \textbf{Client Side:} The client-side comprises the mobile app interface accessible to users. It interacts with backend servers for data collection, storage, and retrieval.
-    
-    \item \textbf{Backend Servers:} Backend servers handle data processing, storage, and communication with external APIs and databases. They manage user requests, data synchronization, and law enforcement access.
-    
-    \item \textbf{Database:} A centralized database stores collected user data securely. It supports structured and unstructured data types, enabling efficient data querying and analysis.
-    
-    \item \textbf{API Layer:} An API layer facilitates communication between the client-side app and backend servers. It includes endpoints for data retrieval, updates, and law enforcement functionalities.
-    
-    \item \textbf{Security Infrastructure:} The architecture incorporates security measures such as HTTPS protocols, data encryption, firewalls, and intrusion detection systems to protect data integrity and privacy.
-    
-    \item \textbf{Cloud Integration:} Leveraging cloud computing services for scalable infrastructure, data storage, and computation resources. Cloud integration enables flexible deployment options, cost optimization, and improved scalability for handling varying user loads.
+\begin{enumerate}[label=\roman*.]
 
-    \item \textbf{Data Backup and Recovery:} Implementing robust data backup and recovery mechanisms to ensure data resilience and continuity in case of system failures, disasters, or security incidents. This includes regular backups, disaster recovery plans, and data redundancy strategies.
+    \item \textbf{React:} React Framework to create user interfaces. React Native uses react model to create user interfaces.
     
-    \item \textbf{Compliance Monitoring and Auditing:} Integrating compliance monitoring tools and audit trails to track data access, usage, and modifications. Compliance audits ensure adherence to regulatory requirements, industry standards, and internal policies.
+    \item \textbf{Metro:} Metro server is used to create a server that compile react native project to a JS Bundle to handle user interface.
     
-    \item \textbf{Version Control and Release Management:} Implementing version control systems and robust release management practices to manage app updates, bug fixes, and feature enhancements. Versioning ensures consistency, compatibility, and traceability of app changes over time.
+    \item \textbf{JS Bundle:} Metro server generates the JS Bundle and Bridge can interact with Java Engine
+
+    \item \textbf{Bridge}: Android apps are runs on java engine and  bridge is used for communication between javascript bundle  and java engine  using JSON.
     
-    \item \textbf{Performance Optimization:} Conducting performance profiling, load testing, and optimization efforts to enhance app responsiveness, scalability, and resource utilization. Performance optimizations may include code refactoring, caching strategies, and database indexing.
+    \item \textbf{Database:} SQLite and React Native Firebase is used to cache user data in the app for future usage.
+    
+    \item \textbf{Native Modules:} React cannot handle every functionalities. Native Modules are used to  design a function in native code such as Java or Kotlin, Now javascript use bridge to call that function.
+    
+    \item \textbf{Native UI:} Native UI ares implemented that are interlined to various functionalities of native modules.
+    
+    \item \textbf{Encryption :} React Native Crypto-js is used to encrypt the information transmitted to the server. Advanced Encryption Standard (AES) is used for Encryption.
+    
+    \item \textbf{Decryption :} React Native Crypto-js is used to decrypt the information transmitted from the server. Advanced Encryption Standard (AES) is used for Decryption.
+
 \end{enumerate}
 
+\subsection{Server Side}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{Media//phone.png}
-    \caption{App on phone}
-    \label{fig:App on phone}
-\end{figure}
+\begin{enumerate}[label=\roman*.]
+
+    \item \textbf{Backend Servers:} NginX is used to run backend server. Backend servers handle data processing, storage, and communication with external APIs and databases. They manage user requests, data synchronization, and law enforcement access.
+    
+    \item \textbf{Express.js:} Express.js is used to create a server that handles user requests and responses. It provides routing, middleware, and API endpoints for client-server communication.
+    \item \textbf{Node.js:} Node.js is used to run the server-side code. It provides a runtime environment for JavaScript code execution on the server.
+    \item \textbf{Crypto-js:} Crypto-js is used to encrypt and decrypt sensitive data transmitted between the client and server. It ensures data security and privacy during data transmission.
+    \item \textbf{Backend Encryption:} Backend servers use encryption mechanisms to secure data at rest and in transit. This includes SSL/TLS encryption, data encryption algorithms, and secure key management practices.
+    \item \textbf{Backend Decryption:} Backend servers use decryption mechanisms to process encrypted data received from clients. This includes decrypting user data for analysis, storage, and law enforcement access.
+    \item \textbf{Database management:} PostgeSQL is used to store user data securely. It provides data integrity, scalability, and compliance with legal and privacy standards.
+\end{enumerate}

@@ -1,42 +1,40 @@
 \chapter{Implementation}
 \justify
 
-The implementation phase of the project has followed a systematic approach, incorporating all the steps and methods mentioned in the previous chapters. This phase has utilized the mentioned tools and technologies to achieve the project's objectives effectively and efficiently. The following objectives have been developed for the complete implementation of this project.
+The implementation phase of the project has followed a systematic approach, incorporating all the steps and methods mentioned in the previous chapters. This phase has utilized the mentioned tools and technologies to achieve the project's objectives effectively and efficiently. 
 
-\section{Objectives of Implementation}
-
-The implementation phase aims to achieve the following objectives:
-
-\begin{enumerate}
-    \item \textbf{System Development:} Implement and deploy the Open-source Intelligence Data Extraction System with robust capabilities for analyzing call data records (CDRs) and tower dump data.
+\section{OSINT Data Mining Software}
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Frontend:} The frond end is design using .NET framework. The .NET Framework is a proprietary software framework developed by Microsoft that runs primarily on Microsoft Windows. It was the predominant implementation of the Common Language Infrastructure until being superseded by the cross-platform .NET project.
     
-    \item \textbf{Data Collection:} Efficiently gather diverse information from individuals, including vehicle details, location data, IMEI numbers, phone numbers, PAN numbers, MNP details, IP information, and other relevant data points.
-  
-    \item \textbf{Developing the "Call One" App:} The primary objective is to develop the "Call One" caller ID app incorporating all the functionalities discussed in the design phase.
+    \item \textbf{Bacnkend:} Backend server is design in Express.js. various technologies are integrated in the express.js app.
     
-    \item \textbf{Data Collection Modules Integration:} Implementing data collection modules for extracting users' contacts, call logs, emails, and location information from various sources securely and efficiently.
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Court Checker} : The Verify 24x7 Court checker is a third party tool that has large collection of court cases in India containing millions of records and updated on a daily basis. Given a name and address, our smart, proprietary algorithms retrieve matching cases in a few seconds.
+        
+        \item \textbf{OSINT Search}: OSINT search is a feature that allows users to gather publicly available information about individuals, including personal and public details, to aid in investigations. By utilizing OSINT (Open-Source Intelligence) techniques, this feature helps retrieve relevant information about the suspect, such as their personal background, social
+        media activity, online presence, and other publicly accessible data. This
+        comprehensive search capability assists law enforcement agencies and investigators in building a more complete profile of the culprit, aiding in the investigation process.
+        
+        \item \textbf{Vehicle Information:} Vehicle Information is a feature that allows users to obtain details about a specific vehicle using its registration number. By inputting the vehicle number into the system, investigators can retrieve information such as the make, model, year of manufacture, color, and ownership details of the vehicle associated with that registration number. This feature is valuable in investigations as it helps identify and
+        track vehicles linked to criminal activities, providing important leads for law enforcement agencies and helping them in their pursuit of the culprits.
+    \end{enumerate}
     
-    \item \textbf{Database Setup:} Setting up a secure database management system (DBMS) to store collected data, ensuring data integrity, accessibility, and compliance with legal and privacy standards.
-    
-    \item \textbf{UI/UX Design:} Designing an intuitive and user-friendly interface for the app, including screens for data collection, settings, notifications, and law enforcement functionalities, following best practices in user experience (UX) design.
-    
-    \item \textbf{Security Measures Implementation:} Integrating robust encryption mechanisms, access controls, and authentication protocols to safeguard sensitive data, especially law enforcement-related information, and ensure data security throughout the app.
-    
-    \item \textbf{Testing and Quality Assurance:} Conducting comprehensive testing, including unit testing, integration testing, and user acceptance testing (UAT), along with quality assurance (QA) processes to ensure the app's functionality, performance, and reliability meet the required standards.
-    
-    \item \textbf{Deployment and Maintenance:} Deploying the app on appropriate platforms, such as Google Play Store for Android devices, Apple App Store for iOS devices, and ensuring ongoing maintenance, bug fixes, and updates to provide a seamless user experience.
-    
-    \item \textbf{Scalability Assessment:} Evaluating the system's scalability to handle increasing user loads, data volumes, and feature expansions over time, ensuring the app can grow with the user base and technological advancements.
-    
-    \item \textbf{Performance Optimization:} Identifying and optimizing performance bottlenecks, such as slow data retrieval or app responsiveness issues, through code optimizations, caching strategies, and database tuning, to enhance user experience and app efficiency.
-
-    \item \textbf{Continuous Improvement:} Establishing processes for continuous monitoring, feedback analysis, and iterative updates to enhance app functionality, address user needs, and stay competitive in the market.
-    
-    \item \textbf{Security Audits:} Conducting regular security audits, vulnerability assessments, and penetration testing to identify and mitigate potential security risks, ensuring a robust security posture and data protection measures.
-    
-    \item \textbf{Data Backup and Recovery Strategies:} Implementing robust data backup, disaster recovery, and business continuity strategies to prevent data loss, ensure data availability, and maintain operational resilience in case of system failures, natural disasters, or cyberattacks.
-    
-    \item \textbf{Version Control and Release Management:} Implementing version control systems (e.g., Git) and robust release management practices for organized code management, version tracking, branching strategies, feature toggles, staged rollouts, and rollback mechanisms to ensure stability, scalability, and reliability of app updates and releases.    
 \end{enumerate}
 
+\section{Call One App}
 
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Frontend:} The frond end is design using React Native. The UI design focuses on providing an intuitive and user-friendly experience for app users. It includes screens for data collection, settings, notifications, and law enforcement functionalities.
+    
+    \item \textbf{Bacnkend:} Backend server is design in Express.js. various technologies are integrated in the express.js app.
+    
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Express.js} Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. APIs.
+        
+        \item \textbf{PostgreSQL} : PostgreSQL is used to store user details such as user contacts, call logs, devices information. PostgreSQL is an object-relational database management system (ORDMBS), which means that it has relational capabilities and an object-oriented design
+        
+        \item \textbf{Crypto-js}: Used AES Encryption method to encrypt user information that is transmitted over the server. Advanced Encryption Standard (AES) is an algorithm that uses the same key to encrypt and decrypt protected data. 
+    \end{enumerate}
+    
+\end{enumerate}

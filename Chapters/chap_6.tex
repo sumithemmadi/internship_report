@@ -4,65 +4,67 @@
 Product development has been completed for the project, and as a result, all functionalities have been thoroughly tested. This chapter presents a comprehensive overview of the features tested, providing screenshots and photographs of hardware to illustrate the outcome of the built systems.
 
 \section{Testing Methodology}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.80\linewidth]{Media/Chapter 6/diagram_testing.png}
-    \caption{Testing}
-    \label{fig:Testing}
-\end{figure}
 
-The testing phase involved various methodologies to ensure the functionality, performance, and reliability of the "Call One" caller ID app. The following testing methods were employed:
+The testing phase involved various methodologies to ensure the functionality, performance, and reliability of Open-source Intelligence Data Mining System and  "Call One" caller ID  android app. The following testing methods were employed:
 
-\begin{enumerate}
-    \item \textbf{Unit Testing:} Testing individual modules and components to verify their correctness and functionality.
-    Unit tests cover the smallest parts of code, like individual functions or classes.When the object being tested has any dependencies, you’ll often need to mock them out, as described in the next paragraph.
-    
-    The great thing about unit tests is that they are quick to write and run. Therefore, as you work, you get fast feedback about whether your tests are passing. Jest even has an option to continuously run tests that are related to code you’re editing: Watch mode.
-    
-    \item \textbf{Integration Testing:} Testing the integration of different modules and components to ensure they work together seamlessly.
-    
-    \item \textbf{System Testing:} Testing the entire system as a whole to validate its functionality, performance, and compliance with requirements.
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Unit Testing:} Testing individual modules and components to verify their correctness and functionality. Jest an nodejs module is used to test the components of the the android app and call one app's backend. The example test results is depicted in figure \ref{fig:JestTesting} .
 
-    \item \textbf{Testing and Debugging}: React Native supports various testing and debugging tools, including Jest for unit testing, React Native Debugger for debugging, and tools like Flipper for inspecting app performance and behavior.
-    
-    
-    \item \textbf{User Acceptance Testing (UAT):} Involving users to test the app's usability, user interface, and overall satisfaction.
-    
-    \item \textbf{Performance Testing:} Assessing the app's performance under various load conditions to ensure optimal performance.
-    
-    \item \textbf{Security Testing:} Testing the app's security measures, including data encryption, access controls, and authentication protocols.
-    
-    \item \textbf{Compatibility Testing:} Testing the app's compatibility with different devices, operating systems, and browsers.
-    
-    \item \textbf{Jest Testing:} Using Jest, a popular JavaScript testing framework, for unit testing JavaScript components and functionalities within the "Call One" app.
-    
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.90\linewidth]{Media//Chapter 6/jest.png}
-        \caption{Jest Testing}
-        \label{fig:JestTesting}
-    \end{figure}
+    \item \textbf{Testing and Debugging}: Used flipper to test the state of the application in different phase and checking shared preferences as shown in the figure \ref{fig: Testing and Debugging} and \ref{fig:Flipper Debugging Tool}.
+ 
+    \item \textbf{Performance Testing:} Assessing the app's performance under various load conditions. Used FlatList to render contacts and call logs to implove the performance. As showing in the Figure \ref{fig: Performance Testing} the performance score is 91 and on average it is rendering 57 frames per second.
 
 \end{enumerate}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 6/jest.png}
+    \caption{Jest Testing}
+    \label{fig:JestTesting}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 6/sharedprefs.png}
+    \caption{Testing and Debugging}
+    \label{fig: Testing and Debugging}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 6/flipper.png}
+    \caption{Flipper Debugging}
+    \label{fig:Flipper Debugging Tool}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 6/performance.png}
+    \caption{Performance Testing}
+    \label{fig: Performance Testing}
+\end{figure}
 
 \section{Experimental Results}
 
 The experimental results of the testing phase demonstrated the following outcomes:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*.]
     \item \textbf{Functionalities Verified:} All functionalities of the "Call One" app were verified and found to be working as expected.
     
     \item \textbf{Performance Optimization:} Performance testing revealed that the app performs optimally under various load conditions, ensuring smooth user experience.
     
-    \item \textbf{Data Security:} Security testing confirmed that data encryption, access controls, and authentication mechanisms are robust, ensuring data security.
-    
-    \item \textbf{User Satisfaction:} User acceptance testing (UAT) indicated high user satisfaction with the app's usability, interface design, and overall functionality.
-    
-    \item \textbf{Compatibility:} Compatibility testing demonstrated that the app is compatible with a wide range of devices, operating systems, and browsers.
 \end{enumerate}
 
-Screenshots and photographs of hardware may be included in the following sections to provide visual  of the tested features and outcomes.
+After conducting the tests, all the test cases had been passed, the bugs had been fixed, and it's ready to be released. The flow of testing and fixing the bugs is depicted in the figure \ref{fig:Testing}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media/Chapter 6/diagram_testing.png}
+    \caption{Testing}
+    \label{fig:Testing}
+\end{figure}
+
 
 \section{Screenshots and Photographs}
 
