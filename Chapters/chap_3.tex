@@ -1,10 +1,11 @@
 
-\chapter{Proposed System}
+\chapter{Proposed System}\label{ch:proposed-system}
 \justify
 
-This chapter provides a detailed overview of the \textbf{{\myprojectname}}. It outlines the project's main aim of collecting information for law enforcement purposes, along with the objectives, assumptions, dependencies, and system requirements essential for its implementation.
+This chapter provides a detailed overview of the \textbf{{\myprojectname}}.
+The project main aim is to collect Open Source and Internet Exposed information for law enforcement purposes, along with the objectives, assumptions, dependencies, and system requirements essential for its implementation.
 
-\section{Objectives}
+\section{Objectives}\label{sec:objectives}
 
 The primary objective of this application is to provide law enforcement agencies with a rapid and efficient means of analyzing call data records (CDRs) and tower dump data. C-Trace OSINT software acts as a force multiplier, empowering investigators to make informed decisions and progress their investigations more effectively. Specifically, the objectives are as follows:
 
@@ -21,12 +22,13 @@ The primary objective of this application is to provide law enforcement agencies
         \item Court cases
         \item PNR information and more
     \end{itemize}
-    \item To develop a caller ID app named "Call One" that collects users' contacts, call logs, emails, and location information.
+    \item To develop a caller ID app named Call One that provide default call app feature, spam call detection, collects users contacts, call logs, emails, and location information.
+
     \item To store the collected data securely in a PostgreSQL database for law enforcement agencies to access.
 
 \end{enumerate}
 
-\section{Assumptions}
+\section{Assumptions}\label{sec:assumptions}
 The successful implementation of the \textbf{{\myprojectname}} is based on the following assumptions:
 \begin{enumerate}[label=\roman*.]
     \item \textbf{Availability of Necessary APIs}: The app assumes access to APIs or scraping techniques to collect data from various sources.
@@ -35,31 +37,33 @@ The successful implementation of the \textbf{{\myprojectname}} is based on the f
     \item \textbf{Continuous Monitoring}: Implementing continuous monitoring mechanisms to detect and respond to any unauthorized access attempts or security breaches promptly.
 \end{enumerate}
 
-\section{Dependencies}
+\section{Dependencies}\label{sec:dependencies}
 The proposed system is dependent on the following factors for its successful implementation:
 \begin{enumerate}[label=\roman*.]
     \item \textbf{Technical Infrastructure}: Availability of necessary hardware, software, and network infrastructure to support app functionality.
     \item \textbf{Legal Compliance}: Adherence to legal regulations and privacy policies governing data collection and usage, including provisions for law enforcement access.
-    \item \textbf{User Adoption}: User acceptance and adoption of the "Call One" app, with awareness of its law enforcement data collection purpose.
+    \item \textbf{User Adoption}: User acceptance and adoption of the Call One app, with awareness of its law enforcement data collection purpose.
 \end{enumerate}
 
-\section{Requirements}
+\section{Requirements}\label{sec:requirements}
 
 The requirements for implementing the {\myprojectname} include:
 
-\subsection{Software Requirements}
+\subsection{Software Requirements}\label{subsec:software-requirements}
 
 \begin{enumerate}[label=\roman*.]
     \item \textbf{.Net Framework}:  .NET Framework on Windows, Generally need a compatible Windows OS (like Windows 7, 8, 8.1, or 10) and the specific version of .NET Framework required by the app installed on system.
     \item \textbf{Chromium Browser}:  Chromium Browser is used to scrap data from websites using Puppeteer.
     \item \textbf{Node.js}: A compatible node.js version 18 or above is required to installed on the system.
-    \item \textbf{kotlin}: kotlin is need to be installed on the system to design android app. 
+    \item \textbf{Kotlin}: kotlin is need to be installed on the system to design android app.
     \item \textbf{Data Collection Modules}: Modules for collecting contacts, call logs, emails, and location information.
-    \item \textbf{Database Management System}: A robust database management system for secure data storage and retrieval. PostgreSQL is used to store user information on database.
-    \item \textbf{Security Features}: Encryption mechanisms, access controls, and authentication protocols to ensure data security. used AES encryption technique to encrypt the information.
+    \item \textbf{Database Management System}: A robust database management system for secure data storage and retrieval.
+    PostgreSQL is used to store user information on database.
+    \item \textbf{Security Features}: Encryption mechanisms, access controls, and authentication protocols to ensure data security.
+    used AES encryption technique to encrypt the information.
 \end{enumerate}
 
-\subsection{Hardware Requirements}
+\subsection{Hardware Requirements}\label{subsec:hardware-requirements}
 
 \begin{enumerate}[label=\roman*.]
     \item \textbf{Compatible System}: Windows Machine (like Windows 7, 8, 8.1, or 10) and the specific version of .NET Framework required by the app installed on system. 

@@ -26,15 +26,15 @@
 \usepackage{epstopdf}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
-\usepackage{float}
 \usepackage{pdfpages}
 \usepackage{hyperref} 
-\usepackage{enumitem} 
-\usepackage{pdfpages}
-
+\usepackage{enumitem}
+\usepackage{subcaption}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{xcolor}
 \pagestyle{fancy}
 \fancyhead{}
 % \fancyhead[LO,LE]{\scriptsize \mytitle}
@@ -70,7 +70,7 @@
 \setlength{\marginparwidth}{2cm}
 
 \begin{document}
-    \baselineskip=18pt plus1pt
+    \baselineskip=18pt plus pt
     \setcounter{secnumdepth}{3}
     \setcounter{tocdepth}{3}
     \pagenumbering{roman}
@@ -111,7 +111,11 @@
     \phantomsection
     \addcontentsline{toc}{chapter}{Format 3}
     \includepdf[pages=-]{./UI20CS21_Format3.pdf}
-    
+
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Internship Completion Certificate}
+    \includepdf[pages=-]{./UI20CS21_INTERNSHIP_CERTIFICATE.pdf}
+
     %Main material
     \clearpage
     \pagenumbering{arabic}
@@ -141,7 +145,8 @@
 
     \phantomsection
     \addcontentsline{toc}{chapter}{Supervisor Evaluation of Intern}
-    %\includepdf[scale=1,pages={1},pagecommand={\thispagestyle{plain}}]{Extras/5and6.pdf}
+    \includepdf[scale=1,pages={1},pagecommand={\thispagestyle{plain}}]{UI20CS21_Format5.pdf}
+    \includepdf[scale=1,pages={1,2},pagecommand={\thispagestyle{plain}}]{UI20CS21_Format6.pdf}
 
     \phantomsection
     \addcontentsline{toc}{chapter}{Student Feedback of Internship}

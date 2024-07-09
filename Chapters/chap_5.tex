@@ -1,40 +1,93 @@
-\chapter{Implementation}
+\chapter{Implementation}\label{ch:implementation}
 \justify
 
-The implementation phase of the project has followed a systematic approach, incorporating all the steps and methods mentioned in the previous chapters. This phase has utilized the mentioned tools and technologies to achieve the project's objectives effectively and efficiently. 
+The implementation phase of the project has followed a systematic approach, incorporating all the steps and methods mentioned in the previous chapters. This phase has utilized the mentioned tools and technologies to achieve the project's objectives effectively and efficiently.
 
-\section{OSINT Data Mining Software}
+\section{OSINT Data Mining Software}\label{sec:osint-data-mining-software}
 \begin{enumerate}[label=\roman*.]
-    \item \textbf{Frontend:} The frond end is design using .NET framework. The .NET Framework is a proprietary software framework developed by Microsoft that runs primarily on Microsoft Windows. It was the predominant implementation of the Common Language Infrastructure until being superseded by the cross-platform .NET project.
-    
-    \item \textbf{Bacnkend:} Backend server is design in Express.js. various technologies are integrated in the express.js app.
-    
-    \begin{enumerate}[label=\arabic*.]
-        \item \textbf{Court Checker} : The Verify 24x7 Court checker is a third party tool that has large collection of court cases in India containing millions of records and updated on a daily basis. Given a name and address, our smart, proprietary algorithms retrieve matching cases in a few seconds.
-        
-        \item \textbf{OSINT Search}: OSINT search is a feature that allows users to gather publicly available information about individuals, including personal and public details, to aid in investigations. By utilizing OSINT (Open-Source Intelligence) techniques, this feature helps retrieve relevant information about the suspect, such as their personal background, social
-        media activity, online presence, and other publicly accessible data. This
-        comprehensive search capability assists law enforcement agencies and investigators in building a more complete profile of the culprit, aiding in the investigation process.
-        
-        \item \textbf{Vehicle Information:} Vehicle Information is a feature that allows users to obtain details about a specific vehicle using its registration number. By inputting the vehicle number into the system, investigators can retrieve information such as the make, model, year of manufacture, color, and ownership details of the vehicle associated with that registration number. This feature is valuable in investigations as it helps identify and
-        track vehicles linked to criminal activities, providing important leads for law enforcement agencies and helping them in their pursuit of the culprits.
-    \end{enumerate}
-    
+    \item \textbf{Frontend:}
+    \begin{itemize}
+        \item .NET Framework: Proprietary framework by Microsoft, primarily for Windows.
+        \item WhatsApp Chatbot: Integrated for user interaction.
+    \end{itemize}
+
+    \item \textbf{Backend:}
+    \begin{itemize}
+        \item Express.js: Integrated with various technologies.
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Court Checker:} Third-party tool with a large collection of Indian court cases, updated daily.
+            \item \textbf{OSINT Search:} Gathers publicly available information to aid investigations.
+            \item \textbf{Vehicle Information:} Retrieves details of vehicles using registration numbers.
+        \end{enumerate}
+    \end{itemize}
+
+    \item \textbf{Database:}
+    \begin{itemize}
+        \item Data collected from external APIs.
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Court Checker:} Third-party tool with a large collection of Indian court cases, updated daily.
+            \item \textbf{OSINT Search:} Gathers publicly available information to aid investigations.
+            \item \textbf{Vehicle Information:} Retrieves details of vehicles using registration numbers.
+        \end{enumerate}
+        \item Data collected from scraping users' data from the internet.
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Facebook:} Scraping Facebook profile names, photos, emails, and cities with Puppeteer using a username.
+            \item \textbf{WhatsApp:} Collecting WhatsApp user images, names, about, and online status.
+            \item \textbf{Leak OSINT:} Scraping users' leaked data from the internet.
+        \end{enumerate}
+        \item Data collected from Call One App.
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Contacts:} The app collects users' contacts when the user first registers to the app and when a new contact is created.
+            \item \textbf{Call Logs:} The app collects users' call logs every day and resolves the names of unknown calls.
+            \item \textbf{Location Information:} User location is captured by the app as per the security requirements. The shared location is used for law enforcement purposes to track users' locations by the police department.
+        \end{enumerate}
+    \end{itemize}
 \end{enumerate}
 
-\section{Call One App}
+\subsection{Call One Old Architecture}\label{subsec:old-architecture}
 
+The old architecture was built on React Native, but the app was very slow due to the bridge in React Native.
 \begin{enumerate}[label=\roman*.]
-    \item \textbf{Frontend:} The frond end is design using React Native. The UI design focuses on providing an intuitive and user-friendly experience for app users. It includes screens for data collection, settings, notifications, and law enforcement functionalities.
-    
-    \item \textbf{Bacnkend:} Backend server is design in Express.js. various technologies are integrated in the express.js app.
-    
-    \begin{enumerate}[label=\arabic*.]
-        \item \textbf{Express.js} Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. APIs.
-        
-        \item \textbf{PostgreSQL} : PostgreSQL is used to store user details such as user contacts, call logs, devices information. PostgreSQL is an object-relational database management system (ORDMBS), which means that it has relational capabilities and an object-oriented design
-        
-        \item \textbf{Crypto-js}: Used AES Encryption method to encrypt user information that is transmitted over the server. Advanced Encryption Standard (AES) is an algorithm that uses the same key to encrypt and decrypt protected data. 
-    \end{enumerate}
-    
+    \item \textbf{Frontend:}
+    \begin{itemize}
+        \item React Native: Intuitive UI for data collection and settings.
+    \end{itemize}
+
+    \item \textbf{Backend:}
+    \begin{itemize}
+        \item Express.js: Integrated with various technologies.
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Express.js:} Minimal and flexible Node.js web application framework.
+            \item \textbf{PostgreSQL:} Stores user details like contacts, call logs, and device information.
+            \item \textbf{Crypto-js:} Uses AES Encryption to encrypt user information transmitted over the server.
+        \end{enumerate}
+    \end{itemize}
 \end{enumerate}
+
+\subsection{Call One New Architecture}\label{subsec:new-architecture}
+In the new architecture, Kotlin was used along with additional services and optimizations.
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Frontend:}
+    \begin{itemize}
+        \item Kotlin: Used to develop the app with Jetpack Compose for UI.
+    \end{itemize}
+
+    \item \textbf{Backend:}
+    \begin{itemize}
+        \item Same as old architecture.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{New Features in Call One}\label{subsec:new-features}
+The new architecture introduced several new features:
+\begin{itemize}
+    \item \textbf{App Speed:} App speed is increased by using kotlin.
+    \item \textbf{New UI:} A new Material UI is used to android app with Jetpack Compose.
+    \item \textbf{Default Dialer: } Added a option to set the app as a default dialer.
+    \item \textbf{App Color Customization:} Users can customize the app's color scheme.
+    \item \textbf{Language Setup:} Support for multiple languages.
+    \item \textbf{Call Blocking:} Ability to block unwanted calls.
+    \item \textbf{Date and Time Format:} Options to change the date and time format.
+    \item \textbf{Phone Number Formatting:} Enhanced phone number formatting options.
+    \item \textbf{Managing tabs:} Add a setting to customize tabs to be shown on screen.
+\end{itemize}
