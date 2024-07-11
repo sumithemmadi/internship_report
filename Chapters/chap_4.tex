@@ -3,10 +3,20 @@
 
 This chapter elaborates on the system design and architecture for the {\myprojectname} application.
 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 4//img}
+    \caption{Software Design}
+    \label{fig:Software Design}
+\end{figure}
+
+
 \section{Project Overview}\label{sec:project-overview}
 
 The {\myprojectname} project aims to develop a robust system for collecting people's information for law enforcement purposes.The Call One app is a part of Open-source data mining system.
 The system design and architecture play a crucial role in ensuring the app's functionality, scalability, security, and ease of use.
+In the Figure \ref{fig:Software Design}
 
 \section{System Design}\label{sec:system-design}
 
@@ -19,7 +29,6 @@ This App Flow is designed to provide a seamless user experience while ensuring d
     \caption{App Flow}
     \label{fig:App Flow}
 \end{figure}
-
 
 \begin{enumerate}[label=\roman*.]
     \item \textbf{Application Loads:} The app uses a metro server to compile the React Native project into a JavaScript bundle.
@@ -48,8 +57,8 @@ The system design includes the following components and functionalities
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Media/arch}
-    \caption{Android App Architecture}
-    \label{fig:React Native Architecture}
+    \caption{Old App Architecture}
+    \label{fig:Old App Architecture}
 \end{figure}
 
 
@@ -128,6 +137,13 @@ This introduces performance bottlenecks, especially for applications handling la
 \subsection{Suggested Solutions}\label{subsec:suggested-solutions}
 
 To address the performance issues in this architecture, consider the following solutions:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Media//Chapter 4//app_arch}
+    \caption{New App Architecture}
+    \label{fig:New App Architecture}
+\end{figure}
 
 \begin{itemize}
     \item \textbf{Adopt Kotlin as Primary Language}: Transitioning to Kotlin can significantly enhance performance.
