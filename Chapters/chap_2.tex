@@ -1,27 +1,37 @@
 \chapter{Tools and Technologies}\label{ch:tools-and-technologies}
 
 \justify
-{\myprojectname} encompasses a wide range of tools and technologies that facilitate the creation, deployment, and maintenance of applications.
+Open-source Intelligence Data Mining System encompasses a wide range of tools and technologies that facilitate the creation, deployment, and maintenance of applications.
 From integrated development environments (IDEs) for coding to version control systems (VCS) for collaboration, programming languages, frameworks, database management systems (DBMS), cloud platforms, testing tools, API development tools, code editors, project management platforms, security tools, and monitoring/logging solutions.
 
 \section{Tools}\label{sec:tools}
 \justify
 
-The following tools are used for the development, debugging, and testing of the application.
+The following tools are used for the development of the application.
 
 \begin{enumerate}[label=\roman*.]
-  \item \textbf{Visual Studio Code}: A popular code editor developed by Microsoft, used to write and run code.\cite{VSCode}
-  It is used to design the OSINT software, frontend, and backend of the application.
-  \item \textbf{Flipper}: A desktop application developed by Facebook, used for debugging and checking the performance of the Android application. \cite{FLP}
-  \item \textbf{React Native Debugger}: Used for debugging component rendering on different screens, including their structure, alignment, and styling~\cite{RDT}.
-  \item \textbf{HTTPie}: A command-line HTTP client used for testing the APIs of the CallOne application~\cite{Httpie}.
+  \item \textbf{Visual Studio Code}: A popular code editor developed by Microsoft.
+  It is used to design the OSINT software, frontend, and backend of the application due to its powerful features like IntelliSense, debugging, and integrated terminal.\cite{VSCode}
+  \item \textbf{Flipper}: A desktop application developed by Facebook, used for debugging and checking the performance of the Android application.
+  It provides a suite of tools to inspect network traffic, databases, and layout hierarchy, making it easier to optimize the app.\cite{FLP}
+  \item \textbf{ React Native Debugger}: Used for debugging component rendering on different screens, including their structure, alignment, and styling.
+  It helps in identifying and fixing issues in the React Native application quickly.\cite{RNF}
+  \item \textbf{HTTPie}: A command-line HTTP client used for testing the APIs of the CallOne application.
+  Its user-friendly syntax allows for efficient testing of API endpoints, making it easier to debug and validate the backend services.\cite{Httpie}
   \item \textbf{Android Studio}: An IDE used to design the Android application in Kotlin.
-  \item \textbf{Android Emulator}: A tool used to simulate Android devices on a computer to test the application on various devices and Android API levels~\cite{Android Studio}.
-  \item \textbf{Git}: A version control system used for managing code among teams~\cite{Git}.
+  It provides extensive tools for development, testing, and debugging Android apps, ensuring a smooth development workflow.\cite{Android Studio}
+  \item \textbf{Android Emulator}: A tool used to simulate Android devices on a computer to test the application on various devices and Android API levels.
+  This helps in ensuring the app works correctly across different Android versions and device configurations.\cite{Android Studio}
+  \item \textbf{Git}: A version control system used for managing code among teams.
+  It allows multiple developers to collaborate on the codebase, track changes, and manage versions efficiently.\cite{Git}
   \item \textbf{Chromium Browser}: Used to scrape various OSINT information of people from the internet.
+  Its headless mode and developer tools make it suitable for web scraping tasks.\cite{Chromium}
   \item \textbf{DBeaver}: A database management tool used to connect, view, and edit the database of CallOne and OSINT software.
+  It supports multiple databases and provides a comprehensive interface for managing database operations.\cite{DBeaver}
   \item \textbf{Nginx}: A web server used to run the backend server in production.
+  It is known for its high performance, scalability, and ability to handle a large number of concurrent connections, making it ideal for serving web applications. \cite{Nginx}
   \item \textbf{Puppeteer}: A Node library used to scrape data from webpages without detecting automation.
+  It provides a high-level API to control Chromium or Chrome over the DevTools Protocol, allowing for robust web scraping.\cite{Puppeteer}
 \end{enumerate}
 
 \section{Technologies}\label{sec:technologies}
@@ -30,13 +40,22 @@ The following tools are used for the development, debugging, and testing of the 
 The following technologies are used for the development of the application.
 
 \begin{enumerate}[label=\roman*.]
-  \item \textbf{Kotlin}: A programming language used to build the Android application with Jetpack Compose~\cite{kt}.
-  \item \textbf{Jetpack Compose}: A modern UI toolkit based on Material Design, used to create a responsive and visually appealing UI for the Android application~\cite{kt}.
-  \item \textbf{TypeScript}: A superset of JavaScript that adds static types, used to catch errors early in the code editor~\cite{TypeScript}.
-  \item \textbf{Express.js}: A web framework for Node.js, used to create the backend application~\cite{Express}.
-  \item \textbf{Crypto-js}: An npm library used for encryption and decryption~\cite{Crypto-js}.
-  \item \textbf{PostgreSQL}: A relational database management system used to store user data~\cite{psql}.
-  \item \textbf{JSON Web Tokens (JWT)}: Used to authenticate users with the backend server, with each user receiving a unique token~\cite{JWT}.
-  \item \textbf{PDFKit}: A library for generating PDF documents in Node.js and the browser~\cite{PDFKit}.
-  \item \textbf{Baileys (WhatsApp Client)}: A WhatsApp client used to communicate with WhatsApp web sockets~\cite{Baileys}.
+  \item \textbf{Kotlin}: A programming language used to build the Android application with Jetpack Compose.
+  It is preferred for its modern syntax, null safety, and full interoperability with Java.\cite{kt}
+  \item \textbf{Jetpack Compose}: A modern UI toolkit based on Material Design, used to create a responsive and visually appealing UI for the Android application.
+  It simplifies UI development and allows for building complex layouts with less code.\cite{kt}
+  \item \textbf{TypeScript}: A superset of JavaScript that adds static types, used to catch errors early in the code editor.
+  It improves code quality and maintainability by providing type safety and better tooling support.\cite{TypeScript}
+  \item \textbf{Express.js}: A web framework for Node.js, used to create the backend application.
+  It simplifies the process of building robust and scalable web servers and APIs with minimal setup and configuration.\cite{Express}
+  \item \textbf{Crypto-js}: An npm library used for encryption and decryption.
+  It provides a variety of cryptographic algorithms to secure sensitive data within the application.\cite{Crypto-js}
+  \item \textbf{PostgreSQL}: A relational database management system used to store user data.
+  It is chosen for its robustness, extensibility, and support for advanced data types and performance optimization features.\cite{psql}
+  \item \textbf{JSON Web Tokens (JWT)}: Used to authenticate users with the backend server, with each user receiving a unique token.
+  It enables stateless authentication, enhancing security and scalability of the application.\cite{JWT}
+  \item \textbf{PDFKit}: A library for generating PDF documents in Node.js and the browser.
+  It is used to create and customize PDF reports and documents within the application.\cite{PDFKit}
+  \item \textbf{Baileys (WhatsApp Client)}: A WhatsApp client used to communicate with WhatsApp web sockets.
+  It allows the application to interact with WhatsApp for sending and receiving messages programmatically.\cite{Baileys}
 \end{enumerate}

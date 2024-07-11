@@ -1,33 +1,33 @@
 \chapter{Design}\label{ch:design}
 \justify
 
-This chapter elaborates on the system design and architecture for the {\myprojectname} application.
+This chapter elaborates on the system design and architecture for the Open-source Intelligence Data Mining System application.
 
 
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Media//Chapter 4//img}
-    \caption{Software Design}
-    \label{fig:Software Design}
+    \caption{Project Design}
+    \label{fig:Project Design}
 \end{figure}
 
 
 \section{Project Overview}\label{sec:project-overview}
 
-The {\myprojectname} project aims to develop a robust system for collecting people's information for law enforcement purposes.The Call One app is a part of Open-source data mining system.
+The Open-source Intelligence Data Mining System project aims to develop a robust system for collecting people's information for law enforcement purposes.The Call One app is a part of Open-source data mining system.
 The system design and architecture play a crucial role in ensuring the app's functionality, scalability, security, and ease of use.
-In the Figure \ref{fig:Software Design}
+In the Figure~\ref{fig:Project Design}
 
 \section{System Design}\label{sec:system-design}
 
-The Design of the System is depicted in Figure \ref{fig:App Flow}.
-This App Flow is designed to provide a seamless user experience while ensuring data collection, storage, and analysis for law enforcement purposes.The system design of the "Call One" app encompasses several key components:
+The Design of the System is depicted in Figure~\ref{fig:Application Flow}.
+This App Flow is designed to provide a seamless user experience while ensuring data collection, storage, and analysis for law enforcement purposes.The system design of the \("\)Call One\("\) app encompasses several key components:
 
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Media//Application_Flow}
-    \caption{App Flow}
-    \label{fig:App Flow}
+    \caption{Application Flow}
+    \label{fig:Application Flow}
 \end{figure}
 
 \begin{enumerate}[label=\roman*.]
@@ -49,7 +49,7 @@ This App Flow is designed to provide a seamless user experience while ensuring d
 \end{enumerate}
 
 \section{Architecture}\label{sec:architecture}
-The architecture of the \("\)Call One\("\) app follows a client-server architecture depicted in Figure~\ref{fig:React Native Architecture}.
+The architecture of the \("\)Call One\("\) app follows a client-server architecture depicted in Figure~\ref{fig:Application Architecture}.
 The client-side architecture is based on React Native, a popular framework for building cross-platform mobile applications.
 The server-side architecture comprises backend servers running on NginX, Express.js, and Node.js, along with a PostgreSQL database for data storage.
 The system design includes the following components and functionalities
@@ -57,8 +57,8 @@ The system design includes the following components and functionalities
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Media/arch}
-    \caption{Old App Architecture}
-    \label{fig:Old App Architecture}
+    \caption{Application Architecture}
+    \label{fig:Application Architecture}
 \end{figure}
 
 
@@ -141,13 +141,14 @@ To address the performance issues in this architecture, consider the following s
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{Media//Chapter 4//app_arch}
-    \caption{New App Architecture}
-    \label{fig:New App Architecture}
+    \caption{Modified Application Architecture}
+    \label{fig:Modified Application Architecture}
 \end{figure}
 
 \begin{itemize}
     \item \textbf{Adopt Kotlin as Primary Language}: Transitioning to Kotlin can significantly enhance performance.
     Kotlin, being a statically-typed language, compiles directly to native code, reducing reliance on the JavaScript engine and improving overall app responsiveness.
+    As depicted in the Figure~\ref{fig:Modified Application Architecture}
 
     \item \textbf{Implement RecyclerViews for Call Logs}: Utilize RecyclerViews for rendering call logs.
     RecyclerViews efficiently handle large datasets by recycling views, optimizing memory usage, and providing smooth scrolling experiences.
